@@ -15,9 +15,9 @@ function App() {
     });
     return (
         <div className="App">
-            <div className="AppMatchSummary">
+            <div className="AppMatchSummary Highlight">
             </div>
-            <div className="AppMatchScore">
+            <div className="AppMatchScore Highlight">
                 {currentDateTime}
             </div>
         </div>
