@@ -1,3 +1,11 @@
+__body {
+  background-image: url(/sample-photo.jpeg);
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
 .App {
   min-height: calc(100vh - 20px);
   min-width: calc(100vw - 20px);
@@ -11,6 +19,14 @@
   color: white;
 }
 
+.AppLogo  {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+}
+
 .AppMatchSummary {
   flex: 1;
 }
@@ -22,14 +38,99 @@
   align-items: stretch;
   align-content: stretch;
   justify-content: center;
-  height: 120px;
-  font-size: 40px;
+  height: 60px;
+  font-size: 18px;
   overflow: auto;
   text-align: center;
-  padding: 10px;
 }
 
-.Highlight {
+#OverallScore {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: stretch;
+  background: darkgreen;
+  padding: 5px 20px;
+  margin: 0 30px;
+}
+
+#OverallScore:after {
+  content: "";
+  position: absolute;
+  left: -30px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-right: 30px solid darkgreen;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+}
+
+#OverallScore:before {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 30px solid darkgreen;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+}
+
+#BattingScore {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: stretch;
+  color: black;
+  background: white;
+  padding: 8px 25px;
+  margin-right: 30px;
+}
+
+#BattingScore:after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 30px solid white;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+}
+
+#BowlingScore {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: stretch;
+  color: black;
+  background: white;
+  padding: 8px 25px;
+  margin-left: 30px;
+}
+
+#BowlingScore:after {
+  content: "";
+  position: absolute;
+  left: -30px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-right: 30px solid white;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+}
+
+.__Highlight {
   border-color: gray;
   border-style: dashed;
   border-width: 1px;
